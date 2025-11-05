@@ -1,0 +1,25 @@
+JAVA_HOME=C:\Program Files\Java\jdk-1.8
+Path = C:\Program Files\Java\jdk-1.8\bin
+For Hadoop:
+HADOOP_HOME=C:\ApacheHadoop2.9.2
+Path = C:\ApacheHadoop2.9.2\bin
+For Pig:
+PIG_HOME = C:\Apachepig
+Path = C:\Apachepig\bin
+Path = C:\Apachepig\conf
+5) Verify the Paths, Run following commands in a NEW Command Window
+echo %PIG_HOME% 
+6) Open the pig. cmd file in edit mode, and change the value of the HADOOP_BIN_PATH
+Old value:- %HADOOP_HOME%\bin
+New Value:- %HADOOP_HOME%\libexec
+7) Edit Pig Configuration, go to the conf directory within your Pig installation directory, rename the 
+pig.properties.template file to pig.properties. and set the exectype property to "local"
+exectype=local
+8) Start Apache Pig, run the following command in a new Command Prompt as administrator
+C:\Users\Lenovo>echo %PIG_HOME%
+C:\Users\Lenovo>pig -version
+Apache Pig version 0.17.0 (r1797386)
+compiled Jun 02 2017, 15:41:58
+C:\Users\Lenovo>pig
+Grunt Shell started:
+grunt>
